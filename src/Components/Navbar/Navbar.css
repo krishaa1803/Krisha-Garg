@@ -1,0 +1,216 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* Pseudo-element for the moving violet line */
+.navbar::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #D580FF;
+    bottom: 0;
+    left: 0;
+}
+
+/* Logo styling */
+.navbar img {
+    height: 100px;
+    transition: height 0.3s ease;
+}
+
+/* Nav menu styling */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Anchor links styling */
+.nav-menu .anchor-link {
+    text-decoration: none;
+    color: #FFF;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Underline effect on hover */
+.nav-menu .anchor-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #C548FF;
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-menu .anchor-link:hover::after {
+    width: 100%;
+}
+
+.nav-menu .anchor-link:hover {
+    color: #FFF;
+}
+
+.nav-menu .anchor-link:visited {
+    color: #FFF;
+}
+
+/* Connect With Me button */
+.nav-connect {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    border-radius: 40px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #C548FF 102.06%);
+    color: #FFF;
+    font-size: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+
+.marquee-content {
+    position: absolute;
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.nav-connect .marquee-content:hover {
+    transform: scale(1.1);
+}
+
+/* Icon styling for menu open/close */
+.nav-mob-open,
+.nav-mob-close {
+    font-size: 28px;
+    color: #FFF;
+    cursor: pointer;
+    display: none;
+}
+
+/* Small screens (up to 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px; /* Equal padding on both sides */
+        margin: 0 auto; /* Center navbar */
+        width: 100%; /* Full width for mobile */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: #000;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden by default */
+        height: 19%;
+        width: 250px;
+        flex-direction: column;
+        align-items: flex-start; /* Align menu items to the left */
+        background: #000;
+        padding: 20px;
+        gap: 20px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-menu.show {
+        right: 0; /* Show menu when open */
+    }
+
+    .nav-mob-open {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .nav-mob-close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .nav-connect {
+        display: none; /* Hide connect button on mobile */
+    }
+}
+/* Medium screens (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .nav-menu {
+        gap: 40px;
+        font-size: 18px;
+    }
+
+    .navbar img {
+        height: 80px;
+    }
+
+    .nav-mob-open {
+        display: block;
+    }
+
+    .nav-mob-close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+/* Large screens (769px and up) */
+@media (min-width: 769px) {
+    .nav-menu {
+        display: flex;
+        gap: 60px;
+        position: static;
+        background: none;
+        height: auto;
+        flex-direction: row;
+    }
+
+    .nav-mob-open,
+    .nav-mob-close {
+        display: none;
+    }
+}

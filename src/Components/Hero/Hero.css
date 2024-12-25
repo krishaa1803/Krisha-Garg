@@ -1,0 +1,235 @@
+#home {
+  padding-top: 82px; 
+}
+/* Hero section styles */
+.hero {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column;
+    gap: 35px;
+    text-align: left; 
+    width: 100%; /* Ensures the container spans the full width */
+    
+    
+  }
+  
+  .hero h1 {
+    text-align: left; /* Keeps the text left-aligned */
+    width: 70%; /* Adjust this width to control text alignment relative to the container */
+    font-size: 100px;
+    font-weight: 600;
+    margin-top: 0;
+  }
+  
+  .hero h1 span {
+    background: linear-gradient(270deg, #df8908 10%, #c548ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .hero-descriptions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left; /* Keeps the descriptions left-aligned */
+    width: 70%; /* Align descriptions with the heading */
+  }
+  
+  /* FlipText styles */
+  .flip-text-container {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 75px; /* Adjust font size */
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .flip-text-wrapper,
+  .flip-text-overlay {
+    position: relative;
+  }
+  
+  .flip-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .flip-char {
+    display: inline-block;
+    text-transform: uppercase;
+  }
+  
+  /* Hero button styles */
+  .hero-action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 25px;
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    width: 70%; /* Align buttons with other content */
+  }
+  
+  .hero-resume,
+  .hero-connect {
+    padding: 25px 75px;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #df8908 -5.09%, #c548ff 106.28%);
+    cursor: pointer;
+    transition: border 0.3s ease;
+    text-align: center;
+  }
+  
+  .hero-resume:hover,
+  .hero-connect:hover {
+    border: 2px solid white;
+  }
+  
+  .hero-action a {
+    text-decoration: none;  /* Removes the underline */
+    color: inherit; /* Inherits color from parent div */
+}
+
+.hero-action a:hover {
+    color: white; /* Optional: Change color on hover */
+}
+
+/* Prevent the anchor from turning blue or underlined when clicked or visited */
+.hero-action a:visited,
+.hero-action a:active {
+    color: inherit !important;
+}
+/* Responsive for tablets */
+@media (max-width: 1024px) {
+  .hero {
+      gap: 25px; /* Reduce gap between elements */
+      text-align: center; /* Center-align content for better readability */
+  }
+
+  .hero h1 {
+      width: 90%; /* Increase width to accommodate smaller screens */
+      font-size: 60px; /* Reduce font size */
+  }
+
+  .hero-descriptions {
+      width: 90%; /* Align with the heading */
+      font-size: 18px; /* Slightly reduce description font size */
+  }
+
+  .flip-text-container {
+      font-size: 50px; /* Reduce size for flipping text */
+  }
+
+  .hero-action {
+      gap: 20px; /* Reduce gap between buttons */
+      font-size: 18px; /* Adjust button text size */
+      width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .hero-resume,
+  .hero-connect {
+      padding: 15px 50px; /* Reduce padding for buttons */
+      border-radius: 40px; /* Adjust button shape */
+  }
+}
+
+/* Responsive for mobile phones */
+/* Responsive for mobile phones */
+@media (max-width: 480px) {
+  #home {
+    padding-top: 180px; /* Adjust this to make sure the heading is not hidden */
+  }
+  .hero {
+      gap: 15px; /* Further reduce gap for compact screens */
+      text-align: center; /* Center-align all text for mobile */
+      padding: 0 15px; /* Add padding to the left and right for spacing */
+  }
+
+  .hero h1 {
+      width: 100%; /* Full width for small screens */
+      font-size: 40px; /* Further reduce font size */
+  }
+
+  .hero h1 span {
+      background: linear-gradient(270deg, #df8908 10%, #c548ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 38px; /* Match with reduced heading size */
+  }
+
+  .hero-descriptions {
+      width: 100%; /* Full width for smaller devices */
+      font-size: 16px; /* Smaller font size for descriptions */
+      padding: 0 15px; /* Add padding for better alignment */
+  }
+
+  .flip-text-container {
+      font-size: 30px; /* Reduce font size for flipping text */
+  }
+
+  .hero-action {
+      gap: 15px; /* Reduce spacing between buttons */
+      font-size: 14px; /* Smaller text size for buttons */
+      width: 100%; /* Full width for buttons */
+      flex-direction: column; /* Stack buttons in a column */
+      align-items: center; /* Center-align buttons */
+  }
+
+  .hero-resume,
+  .hero-connect {
+      padding: 10px 30px; /* Reduce padding for smaller buttons */
+      border-radius: 30px; /* Keep the rounded effect */
+      width: auto; /* Allow buttons to adjust size naturally */
+      
+  }
+}
+
+/* Responsive for extra small screens (very small smartphones) */
+@media (max-width: 360px) {
+  .hero {
+      gap: 10px; /* Reduce gap between elements */
+      text-align: center; /* Center-align all content */
+  }
+
+  .hero h1 {
+      width: 100%; /* Full width for the heading */
+      font-size: 30px; /* Further reduce font size for small screens */
+  }
+
+  .hero h1 span {
+      font-size: 28px; /* Match gradient text size with heading */
+  }
+
+  .hero-descriptions {
+      width: 100%; /* Full width for descriptions */
+      font-size: 14px; /* Reduce description font size */
+      gap: 10px; /* Less gap between description lines */
+  }
+
+  .flip-text-container {
+      font-size: 20px; /* Smaller flipping text */
+      line-height: 1.1; /* Adjust line height for compact look */
+  }
+
+  .hero-action {
+      gap: 10px; /* Minimize gap between buttons */
+      font-size: 12px; /* Smaller text size for buttons */
+      width: 100%; /* Full width for buttons */
+  }
+
+  .hero-resume,
+  .hero-connect {
+      padding: 8px 20px; /* Reduce button padding */
+      border-radius: 25px; /* Smaller rounded effect */
+      font-size: 12px; /* Smaller button text */
+  }
+}

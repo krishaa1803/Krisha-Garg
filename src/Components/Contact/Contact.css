@@ -1,0 +1,176 @@
+/* Main Contact Container */
+.Contact {
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Title Styling */
+.contact-title h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Contact List Styling */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    align-items: flex-start; 
+    width: 80%; 
+    max-width: 600px; 
+}
+
+/* Individual List Items */
+.contact-list li {
+    display: flex;
+    align-items: center;
+    font-size: 3rem; 
+    width: 100%;
+}
+
+/* Anchor Tag Styling */
+.contact-list a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    width: 100%;
+}
+
+/* Icon Styling */
+.contact-list a i {
+    margin-right: 12px;
+    font-size: 32px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #C548FF 102.06%);
+    -webkit-background-clip: text; /* Makes the gradient apply only to the text */
+    -webkit-text-fill-color: transparent; /* Transparent text for the gradient to show */
+    color: transparent;
+    text-shadow: none;
+}
+
+
+/* Hover Effects */
+.contact-list a:hover {
+    
+     /* Underline on hover */
+     background: linear-gradient(270deg, #df8908 50%, #c548ff 100%);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+.contact-list a:hover i {
+    color: #C548FF; 
+}
+/* Footer Section */
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    color: #ffffffd7;
+    font-size: 0.9rem;
+  }
+  
+  .footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.598);
+    width: 100vw; 
+    max-width: 1200px; 
+    margin: 20px auto; 
+  
+  }
+  .footer-copyright {
+    margin: 10px 0;
+  }
+  /* Media Queries for Responsiveness */
+
+/* Small screens (up to 480px) */
+@media (max-width: 480px) {
+    .contact-title h1 {
+        font-size: 2rem;
+    }
+
+    .contact-list {
+        gap: 15px;
+    }
+
+    .contact-list li {
+        font-size: 1.8rem;
+    }
+
+    .contact-list a i {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+
+    .footer {
+        font-size: 0.7rem;
+    }
+}
+  /* Medium screens (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .contact-title h1 {
+        font-size: 2.2rem;
+    }
+
+    .contact-list {
+        gap: 20px;
+    }
+
+    .contact-list li {
+        font-size: 2rem;
+    }
+
+    .contact-list a i {
+        font-size: 24px;
+        margin-right: 8px;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* Large screens (769px and up) */
+@media (min-width: 769px) {
+    .Contact {
+        padding: 50px;
+    }
+
+    .contact-title h1 {
+        font-size: 3rem;
+    }
+
+    .contact-list {
+        gap: 30px;
+    }
+
+    .contact-list li {
+        font-size: 2.5rem;
+    }
+
+    .contact-list a i {
+        font-size: 32px;
+        margin-right: 12px;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+}
+  

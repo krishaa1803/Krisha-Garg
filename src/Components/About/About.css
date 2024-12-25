@@ -1,0 +1,78 @@
+/* About Section Container */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    min-height: 100vh; 
+    padding: 40px 20px; 
+    box-sizing: border-box; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+/* About Title */
+.about-title h1 {
+    font-size: 3rem;
+    margin-bottom: 20px; 
+    text-align: center;
+    color: #fff; 
+}
+
+/* About Paragraph */
+.about-para p {
+    font-size: 1.5rem; 
+    line-height: 1.8; 
+    text-align: justify; 
+    text-justify: inter-word; 
+    hyphens: auto; 
+    word-wrap: break-word; 
+    color: #f1ecec; 
+}
+
+
+/* Mobile Responsive Design */
+@media (max-width: 480px) {
+    .about-para p {
+        text-align: left; 
+        font-size: 1rem; 
+        line-height: 1.6; 
+    }
+
+
+    .about-para p {
+        font-size: 18px; 
+        line-height: 1.4; 
+        text-align: justify; 
+        
+        max-width: 90%; 
+    }
+}
+
+/* Medium Screens (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .about-title h1 {
+        font-size: 2.5rem; 
+        margin-bottom: 15px;
+    }
+
+    .about-para p {
+        font-size: 22px; 
+        line-height: 1.5;
+        text-align: justify; 
+        max-width: 90%; 
+    }
+}
+
+/* Large Screens (769px to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .about-title h1 {
+        font-size: 2.8rem; 
+    }
+
+    .about-para p {
+        font-size: 28px; 
+        text-align: justify; 
+        max-width: 1000px; 
+    }
+}

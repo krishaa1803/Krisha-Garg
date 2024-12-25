@@ -1,0 +1,183 @@
+.skills { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 40px 20px;
+  margin: 0; 
+  width: 100%;
+  height: auto; 
+}
+
+  .skills-title h1 {
+    font-size: 3rem; 
+    margin-bottom: 5px; 
+    text-align: center;
+    color: #fff; 
+}
+  .div-origami {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 5rem 1rem;
+  }
+  
+  .tech-box {
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px; 
+  }
+  
+  .tech-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .logo-rolodex {
+    position: relative;
+    width: 15rem; /* Adjust for consistency */
+    height: 15rem; /* Make it a square for alignment */
+   
+    border-radius: 1rem;
+    border: 1px solid #474747;
+    perspective: 1000px; /* Enables 3D rotation */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content */
+  }
+  
+  .logo-item-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Fill parent */
+    width: 100%; /* Fill parent */
+    transform-style: preserve-3d; /* Preserve 3D rotation */
+    backface-visibility: hidden; /* Prevent front/back overlap */
+  }
+  
+  .logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 9rem;
+    width: 9rem; /* Ensure square dimensions */
+    background: linear-gradient(267deg, #DA7C25 0.36%, #C548FF 102.06%);
+    color: #fff;
+    font-size: 4rem; /* Increase icon size */
+    border-radius: 0.5rem;
+    position: relative;
+  }
+  
+  .logo-item span {
+    position: absolute;
+    bottom: -2rem; /* Position the name below the icon */
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+  }
+  
+  
+  .divider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    border-top: 2px solid #474747;
+  }
+  
+  /* Responsive Design */
+
+/* Small screens (up to 480px) */
+@media (max-width: 480px) {
+  .skills-title h1 {
+    font-size: 2rem;
+  }
+
+  .div-origami {
+    flex-direction: column; /* Stack items vertically */
+    gap: 2rem;
+  }
+
+  .logo-rolodex {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .logo-item {
+    height: 7rem;
+    width: 7rem;
+    font-size: 3rem;
+  }
+
+  .logo-item span {
+    font-size: 0.9rem;
+    bottom: -1.5rem;
+  }
+}
+
+/* Medium screens (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .skills-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .div-origami {
+    flex-direction: row; /* Horizontal layout */
+    gap: 2rem;
+  }
+
+  .logo-rolodex {
+    width: 14rem;
+    height: 14rem;
+  }
+
+  .logo-item {
+    height: 8rem;
+    width: 8rem;
+    font-size: 3.5rem;
+  }
+
+  .logo-item span {
+    font-size: 1rem;
+    bottom: -1.8rem;
+  }
+}
+
+/* Large screens (769px and up) */
+@media (min-width: 769px) {
+  .skills-title h1 {
+    font-size: 3rem;
+  }
+
+  .div-origami {
+    flex-direction: row; /* Horizontal layout */
+    gap: 3rem;
+  }
+
+  .logo-rolodex {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .logo-item {
+    height: 9rem;
+    width: 9rem;
+    font-size: 4rem;
+  }
+
+  .logo-item span {
+    font-size: 1rem;
+    bottom: -2rem;
+  }
+}
